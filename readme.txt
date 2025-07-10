@@ -23,5 +23,8 @@ can be downloaded (HTTP, DASH, m3u8 etc has to be downloaded using different met
 It then downloads the video file (and stiches them together if needed) and informs YoutubeDL when it is done.
 
 d) postprocessors - does the additional tasks like extracting audio, merging video+audio, embedding thumbnail etc. 
-Once the downloader is done downloading the file, YoutubeDL prepares a list of postprocessors to run based on the options the user has 
-given and then runs them one by one.
+Once the downloader is done downloading the file, YoutubeDL prepares a list of postprocessors to run based on the options 
+the user has given and then runs them one by one.
+
+
+read more from - https://github.com/pH-7/Download-Simply-Videos-From-YouTube/blob/main/download.py
