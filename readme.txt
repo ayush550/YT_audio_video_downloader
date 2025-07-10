@@ -15,3 +15,6 @@ b) extractors - are the part that finds the video information (including the for
 c) downloaders - downloads the actual video. Once the extractor has obtained all the necessary information, YoutubeDL looks at this and decides how the file can be downloaded (HTTP, DASH, m3u8 etc has to be downloaded using different methods) and hands the data over to the correct downloader. It then downloads the video file (and stiches them together if needed) and informs YoutubeDL when it is done.
 
 d) postprocessors - does the additional tasks like extracting audio, merging video+audio, embedding thumbnail etc. Once the downloader is done downloading the file, YoutubeDL prepares a list of postprocessors to run based on the options the user has given and then runs them one by one.
+
+
+read more from - https://github.com/pH-7/Download-Simply-Videos-From-YouTube/blob/main/download.py
