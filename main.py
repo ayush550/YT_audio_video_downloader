@@ -7,6 +7,10 @@ import yt_dlp
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 @app.route('/download_playlist', methods=['POST'])
 def download_playlist():
     data = request.get_json()
