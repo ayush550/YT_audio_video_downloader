@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template
 import subprocess
 import os
 import tempfile
@@ -15,10 +15,11 @@ def index():
 def download_playlist():
     data = request.get_json()
     url = data.get('url')
-    format_type = data.get('format', 'mp3')  # 'mp3' or 'mp4'
+    format_type = data.get('format', 'mp3')  # 'mp3' or 'mp4' or 'txt'
 
-    if not url or format_type not in ['mp3', 'mp4']:
-        return jsonify({'error': 'Invalid URL or format'}), 400
+    if not url or format_type not in ['mp3', 'mp4', 'txt']:
+        # return jsonify({'error': 'Invalid URL or format'}), 400
+        render_template('fallback.html')
 
     try:
         # Create a persistent directory for downloads
